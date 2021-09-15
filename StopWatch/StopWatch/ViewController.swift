@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         StartStopButton.setTitleColor(UIColor.green, for: .normal)
     }
 
-
     @IBAction func resetTapped(_ sender: Any) {
         let alert = UIAlertController(title: "Reset Timer?", message: "Are u sure?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_)in}))
@@ -67,4 +66,3 @@ class ViewController: UIViewController {
         return timeString
     }
 }
-
