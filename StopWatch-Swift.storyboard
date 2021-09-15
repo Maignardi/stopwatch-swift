@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f3-EL-pvB">
+                                <rect key="frame" x="37" y="325" width="142.5" height="30"/>
+                                <color key="backgroundColor" red="0.93538837249999995" green="0.92958718169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startstopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="er6-O8-1Vr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wG-1U-5cB">
+                                <rect key="frame" x="201" y="325" width="142.5" height="30"/>
+                                <color key="backgroundColor" red="0.93538837249999995" green="0.92958718169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5d-uD-tcG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcr-Vr-XFa">
+                                <rect key="frame" x="25" y="190" width="334" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9353883724812293" green="0.92958718166252774" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0wG-1U-5cB" firstAttribute="width" secondItem="6f3-EL-pvB" secondAttribute="width" id="1MA-gF-1cH"/>
+                            <constraint firstItem="0wG-1U-5cB" firstAttribute="top" secondItem="zcr-Vr-XFa" secondAttribute="bottom" constant="38" id="7Er-CG-UuH"/>
+                            <constraint firstItem="0wG-1U-5cB" firstAttribute="leading" secondItem="6f3-EL-pvB" secondAttribute="trailing" id="8dW-zb-fdK"/>
+                            <constraint firstItem="zcr-Vr-XFa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9vG-W1-pWd"/>
+                            <constraint firstItem="zcr-Vr-XFa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="246" id="Kgw-T9-ryC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0wG-1U-5cB" secondAttribute="trailing" id="MNG-XM-4hB"/>
+                            <constraint firstItem="6f3-EL-pvB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="mt6-Cl-IpF"/>
+                            <constraint firstItem="6f3-EL-pvB" firstAttribute="centerY" secondItem="0wG-1U-5cB" secondAttribute="centerY" id="toj-dp-PTk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="StartStopButton" destination="6f3-EL-pvB" id="tv8-xO-bX3"/>
+                        <outlet property="TimerLabel" destination="zcr-Vr-XFa" id="wLQ-HF-76R"/>
+                        <outlet property="resetButton" destination="0wG-1U-5cB" id="8Nv-gs-Qh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
